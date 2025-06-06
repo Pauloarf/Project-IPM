@@ -1,0 +1,101 @@
+@import "./base.css";
+
+/* #app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+} */
+
+#app {
+	height: 100%;
+	width: 100%;
+}
+
+a,
+.green {
+	text-decoration: none;
+	color: hsla(160, 100%, 37%, 1);
+	transition: 0.4s;
+	padding: 3px;
+}
+
+h1 {
+	font-size: 50px;
+	font-weight: 600;
+	color: white;
+}
+
+.green {
+	/* color: #22c55e; */
+	color: var(--color-green);
+	font-weight: 600;
+}
+
+.red {
+	/* color: #ef4444; */
+	color: var(--color-red);
+	font-weight: 600;
+}
+
+.orange {
+	color: var(--color-yellow);
+	font-weight: 600;
+}
+
+* {
+	::-webkit-scrollbar {
+		width: 16px;
+		height: 16px;
+		background: inherit;
+	}
+
+	&::-webkit-scrollbar-track {
+		border-radius: 3px;
+	}
+	&::-webkit-scrollbar-track:vertical {
+		border-right: 8px solid rgba(0, 0, 0, 0.2);
+	}
+	&::-webkit-scrollbar-thumb:vertical {
+		border-right: 8px solid rgba(255, 255, 255, 0.2);
+	}
+	&::-webkit-scrollbar-track:horizontal {
+		border-bottom: 8px solid rgba(0, 0, 0, 0.2);
+	}
+	&::-webkit-scrollbar-thumb:horizontal {
+		border-bottom: 8px solid rgba(255, 255, 255, 0.2);
+	}
+	&::-webkit-scrollbar-corner,
+	&::-webkit-resizer {
+		background: inherit;
+		border-right: 8px solid rgba(255, 255, 255, 0.2);
+		border-bottom: 8px solid rgba(255, 255, 255, 0.2);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 2px;
+	}
+}
+
+@media (hover: hover) {
+	a:hover {
+		background-color: hsla(160, 100%, 37%, 0.2);
+	}
+}
+
+@media (min-width: 1024px) {
+	body {
+		display: flex;
+		place-items: center;
+		font-family: "Inter", sans-serif;
+	}
+
+	#app {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		padding: 0;
+	}
+}

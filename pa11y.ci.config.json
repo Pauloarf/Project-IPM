@@ -1,0 +1,86 @@
+{
+    "defaults": {
+        "debug": true,
+        "chromeLaunchConfig": {
+            "executablePath": "/home/rafaelsf/.cache/puppeteer/chrome/linux-136.0.7103.49/chrome-linux64/chrome",
+            "ignoreHTTPSErrors": false,
+            "useIncognitoBrowserContext": false
+        },
+        "headers": {
+            "Cookie": "auth=eyJleHBpcmF0aW9uRGF0ZSI6IjIwMjYtMDUtMDNUMjM6NDQ6NDkuODk2WiIsInVpZCI6IndsaWYxSVRKdlJqUTNVaU1HZFRKQkpVSkdKVUpHVlVKRU5USiIsImNoZWNrc3VtIjoiN2E4NTQ4YzdhZjllYjcwYjI3NDlhZWI2OGQwZTEzODQ0YmFlMDk0M2FiODY5ZTI5NWVmNTZmZjVkODliY2RjZSJ9"
+        },
+        "reporters": [
+            "pa11y-ci-reporter-html",
+            {
+                "destination": "./reports",
+                "includeZeroIssues": true
+            }
+        ]
+    },
+    "urls": [{
+        "url": "http://localhost:5173/login",
+        "actions": [
+            "wait for element input#email to be visible",
+            "set field input#email to jose@di.uminho.pt",
+            "set field input#password to 123"
+        ],
+        "timeout": 5000
+    }, {
+        "url": "http://localhost:5173/diretor",
+        "actions": [],
+        "timeout": 5000
+    }, {
+        "url": "http://localhost:5173/diretor/turnos",
+        "actions": [
+            "click element #turnosCard > div.body > div > div > div > div",
+            "wait for element #turnosCard > div.body > div > div > div.accordion-children to be visible",
+            "click element #turnosCard > div.body > div > div > div > div",
+            "click element #app > div > div > div.content > div.right > div:nth-child(2) > div.filter-options > div > div.filter-item",
+            "click element #turnosCard > div.header > div > div > label"
+        ],
+        "timeout": 5000
+    }, {
+        "url": "http://localhost:5173/diretor/turnos/IPM/T1",
+        "actions": [
+            "click element #changeRoomBtn",
+            "wait for element #roomsCard > div.body > div > div > div:nth-child(2) to be visible",
+            "click element #roomsCard > div.body > div > div > div:nth-child(2)"
+        ],
+        "timeout": 5000
+    }, {
+        "url": "http://localhost:5173/diretor/pedidos",
+        "actions": [
+            "click element #pedidosCard > div.body > div > div:nth-child(2)",
+            "wait for element #app > dialog to be visible"
+        ],
+        "timeout": 5000
+    }, {
+        "url": "http://localhost:5173/diretor/alunos",
+        "actions": [
+            "click element #alunosCard > div.body > div > div > div:nth-child(1) > div > div",
+            "wait for element #alunosCard > div.body > div > div > div:nth-child(1) > div.accordion-children to be visible",
+            "click element #alunosCard > div.body > div > div > div:nth-child(1) > div.accordion-children > div:nth-child(1) > div > div > div.content > div.right > button",
+            "wait for element #app > dialog to be visible",
+            "click element #app > dialog > div > div > div > div.popup-pane > div > div > div.popup-content > div > div.field > div > div.content > div"
+        ],
+        "timeout": 5000
+    }, {
+        "url": "http://localhost:5173/alunos",
+        "actions": [],
+        "timeout": 5000
+    }, {
+        "url": "http://localhost:5173/alunos/pedidos",
+        "actions": [
+            "click element #app > div > div > div.header > div.headerLeft > button",
+            "wait for element #app > dialog to be visible",
+            "click element #app > dialog > div > div > div > div.popup-pane > div > div > div.popup-content > div > div:nth-child(1) > div > div.content > div",
+            "wait for element #app > dialog > div > div > div > div.popup-pane > div > div > div.popup-content > div > div:nth-child(1) > div > div.content > div.dropdown-content to be visible",
+            "click element #app > dialog > div > div > div > div.popup-pane > div > div > div.popup-content > div > div:nth-child(2) > div > div.content > div",
+            "click element #app > dialog > div > div > div > div.popup-pane > div > div > div.popup-content > div > div:nth-child(3) > div > div.content > div",
+            "wait for element #app > dialog > div > div > div > div.popup-pane > div > div > div.popup-content > div > div:nth-child(3) > div > div.content > div.dropdown-content to be visible",
+            "click element #app > dialog > div > div > div > div.popup-pane > div > div > div.popup-content > div > div:nth-child(1) > div > div.content > div.dropdown-content > div:nth-child(1)",
+            "click element #app > dialog > div > div > div > div.popup-pane > div > div > div.popup-content > div > div:nth-child(3) > div > div.content > div.dropdown-content > div:nth-child(1)"
+        ],
+        "timeout": 5000
+    }]
+}

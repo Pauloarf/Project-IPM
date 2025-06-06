@@ -1,0 +1,59 @@
+/* popup.css */
+/* .button { */
+.button--approve,
+.button--reject {
+	padding: 10px 20px;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.button--approve {
+	/* background-color: #22c55e; */
+	background-color: #008a23;
+	color: white;
+}
+.button--approve:hover {
+	/* background-color: #45a049; */
+	background-color: #204a22;
+}
+
+.button--reject {
+	/* background-color: #ef4444; */
+	background-color: #de3333;
+	color: white;
+}
+.button--reject:hover {
+	/* background-color: #e53935; */
+	background-color: #852020;
+}
+
+.button--disabled {
+	background-color: #64748b;
+	opacity: 0.7;
+	cursor: not-allowed;
+}
+
+.dropdown {
+	width: 100%;
+	padding: 12px;
+	background: #303446;
+	border: 1px solid #a1a1aa;
+	border-radius: 6px;
+	color: white;
+	font-size: 16px;
+}
+
+.card-layout {
+	display: flex;
+	gap: 32px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+	.card-layout {
+		flex-direction: column;
+	}
+}

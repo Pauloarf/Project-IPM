@@ -1,0 +1,71 @@
+/*
+  This file defines the styling for form-related elements.
+  To import, add the following line to the component's setup script: `import "@/assets/css/form.css"`.
+*/
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+	gap: 8px;
+}
+
+.form label {
+	font-size: 22px;
+	font-weight: 500;
+	color: white;
+}
+
+.form input {
+	width: 70%;
+	height: 39px;
+	font-size: 22px;
+	font-weight: 400;
+	color: white;
+	background-color: black;
+	border: 0px;
+}
+
+.form button {
+	width: 70%;
+	height: 39px;
+	font-size: 22px;
+	font-weight: 400;
+	background-color: #fafafa;
+	border-radius: 6px;
+	cursor: pointer;
+
+	&.form-button {
+		/* Margin between text and inputs is 16px. Add this margin to make it equal. */
+		margin-top: 11px;
+	}
+}
+
+.form button:hover {
+	background-color: aliceblue;
+}
+
+.form button:disabled {
+	cursor: not-allowed;
+}
+
+.form .error-msg {
+	display: none;
+}
+
+.form.error {
+	label {
+		color: var(--color-error);
+	}
+
+	input {
+		border: 2px solid var(--color-error);
+	}
+
+	.error-msg {
+		display: block;
+		width: 70%;
+		color: var(--color-error);
+	}
+}

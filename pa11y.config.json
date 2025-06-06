@@ -1,0 +1,33 @@
+{
+    "chromeLaunchConfig": {
+        "executablePath": "/home/rafaelsf/.cache/puppeteer/chrome/linux-136.0.7103.49/chrome-linux64/chrome",
+        "ignoreHTTPSErrors": false
+    },
+    "__headers": {
+        "Cookie": "auth=eyJleHBpcmF0aW9uRGF0ZSI6IjIwMjYtMDUtMDNUMjM6NDQ6NDkuODk2WiIsInVpZCI6IndsaWYxSVRKdlJqUTNVaU1HZFRKQkpVSkdKVUpHVlVKRU5USiIsImNoZWNrc3VtIjoiN2E4NTQ4YzdhZjllYjcwYjI3NDlhZWI2OGQwZTEzODQ0YmFlMDk0M2FiODY5ZTI5NWVmNTZmZjVkODliY2RjZSJ9;Expires=Sun, 03 May 2026 23:44:49 GMT;Path=/;Secure"
+    },
+    "ignore": [
+        "color-contrast"
+    ],
+    "reporter": "html",
+    "runners": [
+        "htmlcs"
+    ],
+    "urls": [{
+            "url": "http://localhost:5173/login",
+            "actions": [
+                "wait for element input[name='email'] to be visible",
+                "set field input[name='email'] to jose@di.uminho.pt",
+                "set field input[name='password'] to 123",
+                "click element button.form-button",
+                "wait for url to be http://localhost:5173/diretor"
+            ]
+        },
+        {
+            "url": "http://localhost:5173/diretor",
+            "actions": [
+
+            ]
+        }
+    ]
+}
