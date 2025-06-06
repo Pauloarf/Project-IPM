@@ -23,11 +23,9 @@ A human-centered interface for university shift management, developed using Niel
 - Paulo Alexandre Rodrigues Ferreira
 - [Alex Araújo Sá](https://github.com/alexaraujosa)
 - [Rafael Santos Fernandes](https://github.com/DarkenLM)
-- [Jorge Pereira](https://github.com/KhalexO)
-- [Alex Dias](https://github.com/Jorgeap64)
 
 ## Final Grade
 
---/20
+18/20
 
 *Human-Computer Interaction project @ University of Minho (2024/25)*
